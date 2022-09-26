@@ -2,7 +2,11 @@
 #define MYLIST_
 #include "node.h"
 
-int tempNum =0;
+int tempNum = 0;
+int numComp = 0;
+int numCompMiss = 0;
+int numFound = 0;
+int numNotFound = 0;
 
 template <class T>
 class myList
@@ -10,21 +14,13 @@ class myList
     private:
     node<T> * head;
     int size;
-    int numFound;
-    int numComp;
-    int numNotFound;
-    int numCompMiss;
-    public:
-    
 
+
+    public:
         myList()
         {
             head = nullptr; 
             size = 0;
-            numFound = 0;
-            numComp = 0;
-            numNotFound = 0;
-            numCompMiss = 0;
         
         }
         ~myList()
@@ -152,5 +148,3 @@ T myList<T>::frontMod()
     return T(0);
 }
 #endif
-
-
